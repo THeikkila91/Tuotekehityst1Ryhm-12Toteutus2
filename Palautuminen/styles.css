@@ -1,0 +1,309 @@
+/* --- PERUSASETUKSET (Minimalismi) --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif; /* Kuntospot tyylinen fontti */
+    background-color: #ffffff; /* Puhdas valkoinen tausta */
+    color: #1a1a1a; /* Tumma harmaa teksti */
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* --- APULUOKAT (Yleiset) --- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.narrow-container {
+    max-width: 800px;
+}
+
+.margin-top {
+    margin-top: 20px;
+}
+
+/* Otsikot */
+h1, h2, h3 {
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+h2 {
+    font-size: 28px;
+    margin-bottom: 25px;
+}
+
+h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+/* --- HEADER (Kiinteä valkoinen palkki) --- */
+.site-header {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05); /* Pieni varjo */
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px; /* Hieman leveämpi header */
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.logo-img {
+    height: 50px; /* Säädä logon kokoa */
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 10px 0;
+    position: relative;
+}
+
+/* Aktiivisen linkin/hoverin korostus vihreällä */
+.main-nav a:hover,
+.main-nav a.active {
+    color: #2ecc71; /* Kuntospot-vihreä */
+}
+
+.main-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #2ecc71;
+}
+
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+/* --- PAINIKKEET (BUTTONS) --- */
+.btn {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-filled {
+    background-color: #2ecc71; /* Vihreä täyttö */
+    color: #ffffff;
+    border: 2px solid #2ecc71;
+}
+
+.btn-filled:hover {
+    background-color: #27ae60; /* Tummempi vihreä hover */
+}
+
+.btn-outline {
+    background-color: transparent;
+    color: #1a1a1a;
+    border: 2px solid #1a1a1a; /* Musta reunus */
+}
+
+.btn-outline:hover {
+    background-color: #1a1a1a;
+    color: #ffffff;
+}
+
+/* --- MAIN SISÄLTÖ (Tilaa headerille) --- */
+main {
+    margin-top: 100px; /* Jotta sisältö ei jää headerin alle */
+    padding-bottom: 80px;
+}
+
+/* Hero Section */
+.hero-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.main-title {
+    font-size: 36px;
+    color: #1a1a1a;
+}
+
+/* Recovery Cards Section (Grid) */
+.recovery-services-section {
+    padding: 40px 0;
+}
+
+.recovery-grid {
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.recovery-card {
+    background-color: #ffffff;
+    flex: 1;
+    max-width: 380px;
+    border-radius: 8px;
+    overflow: hidden; /* Pyöristää myös kuvan kulmat */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Moderni pehmeä varjo */
+    transition: transform 0.3s ease;
+}
+
+.recovery-card:hover {
+    transform: translateY(-5px); /* Pieni nouseva efekti */
+}
+
+.card-image-wrapper {
+    height: 250px;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Tärkeä! Kuva täyttää alan venymättä */
+}
+
+.card-content {
+    padding: 30px;
+}
+
+.card-content p {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.benefit-list li {
+    font-size: 13px;
+    color: #1a1a1a;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 8px;
+}
+
+/* Vihreä pallo listan eteen */
+.benefit-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #2ecc71;
+    border-radius: 50%;
+}
+
+/* Article Section (Ilmava leipäteksti) */
+.recovery-article-section {
+    padding: 80px 0;
+}
+
+.article-content {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.article-content p {
+    margin-bottom: 25px;
+}
+
+/* --- FOOTER (Tumma, moderni) --- */
+.site-footer {
+    background-color: #1a1a1a; /* Tumma tausta */
+    color: #ffffff;
+    padding: 60px 0 30px;
+    font-size: 14px;
+}
+
+.footer-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap; /* Responsiivisuus */
+}
+
+.logo-footer {
+    height: 60px;
+    margin-right: 40px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col h3 {
+    font-size: 14px;
+    color: #ffffff;
+    margin-bottom: 15px;
+}
+
+.footer-col p {
+    color: #aaa;
+    margin-bottom: 5px;
+}
+
+.footer-col ul li {
+    margin-bottom: 10px;
+}
+
+.footer-col a {
+    color: #aaa;
+}
+
+.footer-col a:hover {
+    color: #2ecc71;
+}
+
+/* Sosiaaliset media-ikoni */
+.social-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    vertical-align: middle;
+    filter: invert(1); /* Muuttaa mustat ikonit valkoisiksi */
+}
+
+.social-list a {
+    display: flex;
+    align-items: center;
+}
