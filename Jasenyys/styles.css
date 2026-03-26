@@ -1,0 +1,44 @@
+.jasenyys_nappi {
+    display: flex;  
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.jasenyysosto {
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 25px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+
+.jasenyysosto-primary {
+  background-color: #e65127;
+  color: white;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.jasenyysosto-outline {
+  border: 1px solid white;
+  color: white;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.jasenyysosto:hover {
+  opacity: 0.8;
+}
+.promo-card {
+    background-color: white !important;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: 350px; /* Kiinteä leveys testaukseen */
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Näkyvä varjo */
+    display: flex;
+    flex-direction: column;
+}
