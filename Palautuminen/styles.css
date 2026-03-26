@@ -1,4 +1,4 @@
-/* --- PERUSASETUKSET (Minimalismi) --- */
+
 * {
     margin: 0;
     padding: 0;
@@ -27,7 +27,7 @@ img {
     display: block;
 }
 
-/* --- APULUOKAT (Yleiset) --- */
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -118,7 +118,7 @@ h3 {
     gap: 15px;
 }
 
-/* --- PAINIKKEET (BUTTONS) --- */
+/* PAINIKKEET */
 .btn {
     font-size: 12px;
     font-weight: 700;
@@ -149,7 +149,6 @@ h3 {
     color: #ffffff;
 }
 
-/* --- MAIN SISÄLTÖ (Tilaa headerille) --- */
 main {
     margin-top: 100px; /* Jotta sisältö ei jää headerin alle */
     padding-bottom: 80px;
@@ -166,26 +165,97 @@ main {
     color: #1a1a1a;
 }
 
-/* Recovery Cards Section (Grid) */
+
 .recovery-services-section {
     padding: 40px 0;
 }
 
-.recovery-grid {
-    display: flex;
-    gap: 30px;
-    justify-content: center;
+
+.recovery-flow-section {
+    padding: 60px 0;
 }
 
-.recovery-card {
-    background-color: #ffffff;
-    flex: 1;
-    max-width: 380px;
+.recovery-row {
+    display: flex;
+    align-items: center; /* Keskittää sisällön pystysuunnassa */
+    gap: 60px; /* Tilaa kuvan ja tekstin väliin */
+    margin-bottom: 80px; /* Tilaa rivien väliin */
+    background-color: #fafafa; /* Hyvin vaalea harmaa tausta riveille */
+    padding: 40px;
+    border-radius: 8px; /* Pyöristetyt kulmat */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03); /* Hyvin pehmeä varjo */
+}
+
+/* Tämä luokka kääntää kuvan ja tekstin paikan (joka toisella rivillä) */
+.row-reverse {
+    flex-direction: row-reverse;
+    background-color: #ffffff; /* Joka toinen rivi valkoisella taustalla */
+}
+
+.recovery-image {
+    flex: 1; /* Ottaa puolet tilasta */
+    height: 350px;
+    overflow: hidden;
     border-radius: 8px;
-    overflow: hidden; /* Pyöristää myös kuvan kulmat */
-    box-shadow: 0 5px 20px rgba(0,0,0,0.05); /* Moderni pehmeä varjo */
+}
+
+.recovery-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Varmistaa että kuva täyttää alan venymättä */
     transition: transform 0.3s ease;
 }
+
+.recovery-image img:hover {
+    transform: scale(1.03); /* Pieni suurentava hover-efekti kuvalle */
+}
+
+.recovery-text {
+    flex: 1; /* Ottaa puolet tilasta */
+    padding: 20px;
+}
+
+.recovery-text h3 {
+    font-size: 22px;
+    color: #1a1a1a;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.recovery-text p {
+    font-size: 15px;
+    color: #666;
+    margin-bottom: 25px;
+    line-height: 1.7;
+}
+
+/* Benefit-lista tekstin alla */
+.benefit-list {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Kaksi saraketta listalle */
+    gap: 10px;
+}
+
+.benefit-list li {
+    font-size: 13px;
+    color: #333;
+    padding-left: 20px;
+    position: relative;
+    margin-bottom: 5px;
+}
+
+/* Vihreä pallo listan eteen */
+.benefit-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #2ecc71; /* Kuntospot-vihreä */
+    border-radius: 50%;
+}
+
 
 .recovery-card:hover {
     transform: translateY(-5px); /* Pieni nouseva efekti */
@@ -232,7 +302,7 @@ main {
     border-radius: 50%;
 }
 
-/* Article Section (Ilmava leipäteksti) */
+
 .recovery-article-section {
     padding: 80px 0;
 }
@@ -247,7 +317,7 @@ main {
     margin-bottom: 25px;
 }
 
-/* --- FOOTER (Tumma, moderni) --- */
+/* Footer (Tumma, moderni) */
 .site-footer {
     background-color: #1a1a1a; /* Tumma tausta */
     color: #ffffff;
