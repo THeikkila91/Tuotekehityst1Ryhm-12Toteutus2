@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+    color: #111;
+    line-height: 1.5;
+}
+
+.overlay-section {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: 30px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+}
+
+.overlay-section .overlay-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.overlay-section:hover .overlay-img {
+    transform: scale(1.05);
+}
+
+.overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 10px;
+    font-size: 0.95rem;
+}
+
+.overlay-text h1,
+.overlay-text h2 {
+    margin: 0 0 10px 0;
+    color: #ffffff;
+}
+
+.overlay-text p {
+    margin: 0;
+    color: #f0f0f0;
+}
+
+.kaupungit {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.kaupunki-laatikko {
+    position: relative;
+    max-width: 500px;
+    height: 200px;
+    margin: 20px auto;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+}
+
+.kaupunki-laatikko .overlay-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.kaupunki-laatikko:hover .overlay-img {
+    transform: scale(1.05);
+}
+
+.kaupunki-laatikko .overlay-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    text-align: center;
+    background-color: rgba(0,0,0,0.4);
+    border-radius: 8px;
+    color: white;
+    font-size: 0.9rem;
+}
+
+.kaupunki-nimi {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.kaupunki-teksti {
+    font-size: 0.85rem;
+}
+
+@media (max-width: 768px) {
+    .overlay-section .overlay-img,
+    .kaupunki-laatikko .overlay-img {
+        height: 200px;
+    }
+
+    .overlay-text,
+    .kaupunki-laatikko .overlay-text {
+        padding: 10px;
+        font-size: 0.9rem;
+    }
+}
