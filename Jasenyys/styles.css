@@ -1,22 +1,310 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+.header-group {
+  position: relative;
+  width: 100%;
+  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  background: url('tempaus.jpg') center/cover no-repeat;
+  overflow: hidden;
+}
+
+.header-group::before {
+  content: '';
+  position: absolute;
+  top: 0; 
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(
+    circle, 
+    transparent 10%, 
+    rgba(0, 77, 44, 0.7) 70%, 
+    rgba(0, 77, 44, 0.9) 100%
+  );
+  z-index: 1;
+}
+
+.header-group::after {
+  content: '';
+  position: absolute;
+  bottom: -15vh;    /* Use vh instead of px */
+  left: -10%;
+  width: 120%;
+  height: 30vh;     /* Use vh instead of px */
+  background-color: white;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+.navbar {
+  position: relative;
+  z-index: 10;
+  box-sizing: border-box;
+  font-weight: 600;
+}
+
+.navbar {
+  position: absolute;
+  top: 0;
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+  gap: 20px;
+}
+
+button {
+  padding: 12px 24px;
+  border-radius: 30px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  background: #28a745; 
+  color: white;
+}
+
+.palvelukortit {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 60px 20px;
+    background-color: #fcfcfc;
+}
+
+.kuntosali-img {
+    height: 40px;
+    width: auto;
+    margin: 0 auto 15px;
+    display: block;
+}
+
+.palvelukortit h2 {
+    margin: 10px 0;
+    font-size: 28px;
+    font-weight: 800;
+    color: #05162a;
+}
+
+.palvelukortit p {
+    margin: 0;
+    color: #444;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.logo-img {
+    height: 70px;
+    width: auto;
+    display: block;
+}
+
+footer {
+    display: flex;
+    height: 400px;
+    background-color: #111111;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.Footer-laatikot {
+    display: flex;
+    justify-content: center;
+    gap: 100px;
+}
+.logofooter-img {
+    height: 150px;       /* Keeps the logo from looking stretched */
+    display: block;     /* Makes it easier to move around */
+}
+
+.Somet {
+  list-style: none;
+  padding: 0;
+}
+
+.Somet li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.mini-icon {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+
+.Somet a {
+  text-decoration: none;
+  color: white;
+}
+.Footer-Navigaatio ul {
+    list-style-type: none; 
+    padding: 0;
+    margin: 0;
+}
+.Footer-Navigaatio li a {
+    text-decoration: none;
+    color: white;
+}
+.Footer-Navigaatio li a:hover {
+    color: #000000;
+}
+
+.section-title {
+    text-align: left;
+    font-size: 26px;
+    font-weight: 800;
+    margin-bottom: 25px;    /* Väli otsikon ja korttien välissä */
+    color: #05162a;
+}
+/* Tämä pakottaa laatikot riviin */
+.promo-container {
+    display: grid;
+    grid-template-columns: repeat(3, 300px);
+    gap: 100px;
+    justify-content: center;
+}
+
+/* Tämä tekee itse laatikot */
+.promo-card {
+    background-color: white !important;
+    border: 1px solid #ddd;
+    border-radius: 15px;
+    width: 270px; /* Kiinteä leveys testaukseen */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* Kuvatiedostojen säätö */
+.promo-image {
+    width: 100%;
+    height: 250px;
+    background-color: #eee; /* Näkyy harmaana jos kuva puuttuu */
+}
+
+.promo-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.promo-content {
+    padding: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column; 
+    align-items: center;
+    text-align: center;
+    justify-content: flex-start;
+    padding: 40px 20px;
+    height: 100%;
+
+}
+.promo-container-wrapper {
+    display: flex;
+    max-width: 1100px; /* Säädä tämä samaksi kuin korttien yhteisleveys */
+    margin: 0 auto;    /* Keskittää koko paketin sivulla */
+    padding: 0 10px;   /* Estää tekstiä osumasta näytön reunaan mobiilissa */
+    justify-content: center;
+}
+
+.promo-section {
+    background-color: #fcfcfc;
+    padding: 20px 0 60px 0;
+    margin-top: -30px;
+    margin-bottom:-50px;
+}
+.sidebyside_promo {
+  display: flex;
+  border-radius: 15px;
+  align-items: stretch; 
+  background-color: #ffffff;
+  max-width: 1100px;
+  margin: 80px auto;
+  overflow: hidden;
+  border: 1px solid #ddd;
+}
+
+/* Tekstiosio */
+.sidebyside_card {
+  flex: 1; 
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.card_image {
+  flex: 1;
+  min-height: 300px;
+}
+
+.card_image img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  display: block;
+}
+
+.card_content h3 {
+  font-family: 'Helvetica', Arial, sans-serif;
+  color: #001a2c;
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  line-height: 1.2;
+}
+.card_content p {
+  line-height: 1.6;
+  color: #333;
+}
+.sidebyside_promo.reverse {
+  flex-direction: row-reverse;
+  border-radius: 15px
+}
+
 .jasenyys_nappi {
     display: flex;  
     justify-content: center;
     align-items: center;
-    width: 100%;
-    margin-top: 20px;
+    width: 50%;
+    margin-top: auto;
+    align-self: center;
 }
 
 .jasenyysosto {
   padding: 10px 20px;
   text-decoration: none;
-  font-size: 25px;
+  font-size: 15px;
   font-weight: bold;
   border-radius: 5px;
   transition: 0.3s;
 }
 
 .jasenyysosto-primary {
-  background-color: #e65127;
+  background-color: #28a745; 
   color: white;
   font-style: italic;
   text-transform: uppercase;
@@ -31,14 +319,4 @@
 
 .jasenyysosto:hover {
   opacity: 0.8;
-}
-.promo-card {
-    background-color: white !important;
-    border: 1px solid #ddd;
-    border-radius: 15px;
-    width: 350px; /* Kiinteä leveys testaukseen */
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1); /* Näkyvä varjo */
-    display: flex;
-    flex-direction: column;
 }
