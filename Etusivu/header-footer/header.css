@@ -119,18 +119,17 @@ button:hover {
 }
 
 
+/*--- FOOTER ASETUKSET ---*/
+
 footer {
     padding: 4% 5%;
-    bottom: 0;
     width: 90%;
-    position: absolute;
     display: flex;
     background-color: #111111;
     color: white;
     align-items: center;
     justify-content: space-around;
     line-height: 1.5rem;
-    z-index: 20;
 }
 
 .aukioloajat p {
@@ -166,3 +165,5 @@ footer {
 .mini-icon {
   height: 24px;
 }
+
+/* --- FOOTER ASETUKSET LOPPUU --- /*

@@ -269,7 +269,7 @@ button {
   gap: 32px;
 }
 
-/* sääätööööööööö */
+
 
 .card {
   width: 500px;
@@ -280,11 +280,11 @@ button {
   padding: 30px;
   text-align: center;
   align-content: center;
-  color: white; /* Text is black in your screenshot */
+  color: white;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   
-  /* The Secret Sauce */
-  background-blend-mode: overlay; /* Optional: helps blend image/gradient */
+ 
+  background-blend-mode: overlay; 
   background-size: cover;
   background-position: center;
 }
