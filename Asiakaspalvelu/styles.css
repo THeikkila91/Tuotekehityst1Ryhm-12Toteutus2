@@ -326,7 +326,7 @@ footer {
     .linkgroup1 {
         padding: 0.8rem;
         font-size: 0.9rem;
-        border-left: none; /* Poistetaan katkoviivat mobiilissa */
+        border-left: none;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
