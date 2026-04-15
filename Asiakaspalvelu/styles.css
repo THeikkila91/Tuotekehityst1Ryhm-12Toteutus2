@@ -1,0 +1,281 @@
+/* RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: #ffffff;
+    color: #1a1a1a;
+    line-height: 1.6;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Sosiaaliset media-ikoni */
+.social-icon {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+    vertical-align: middle;
+    filter: invert(1); /* Muuttaa mustat ikonit valkoisiksi */
+}
+
+.social-list a {
+    display: flex;
+    align-items: center;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* HEADER */
+.site-header {
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 15px 0;
+    box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+}
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.logo-img {
+    height: 50px;
+}
+
+.main-nav ul {
+    display: flex;
+    gap: 30px;
+}
+
+.main-nav a {
+    font-size: 13px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    position: relative;
+}
+
+.main-nav a:hover,
+.main-nav a.active {
+    color: #2ecc71;
+}
+
+.main-nav a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #2ecc71;
+}
+
+/* BUTTONS */
+.header-actions {
+    display: flex;
+    gap: 15px;
+}
+
+.btn {
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.btn-filled {
+    background: #2ecc71;
+    color: white;
+}
+
+.btn-outline {
+    border: 2px solid #1a1a1a;
+}
+
+/* MAIN */
+main {
+    margin-top: 100px;
+    padding-bottom: 80px;
+}
+
+/* HERO */
+.hero-section {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.main-title {
+    font-size: 36px;
+}
+
+/* YHTEYSTIEDOT */
+.contact-info {
+    text-align: center;
+    margin: 40px auto;
+    max-width: 600px;
+
+    border: 2px solid #2ecc71;
+    border-radius: 16px;
+    padding: 25px;
+}
+
+.contact-info h3 {
+    color: #2ecc71;
+}
+
+.contact-info p {
+    color: #666;
+}
+
+/* LAYOUT */
+.contact-wrapper {
+    display: flex;
+    gap: 50px;
+    justify-content: center;
+    align-items: flex-start;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* KARTTA */
+.hero-contact-map {
+    flex: 3;
+}
+
+.map-container {
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 550px;
+    border: 0;
+}
+
+/* LOMAKE */
+.contact-form {
+    flex: 1;
+    max-width: 350px;
+
+    border: 2px solid #2ecc71;
+    border-radius: 16px;
+    padding: 25px;
+
+    background: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.contact-form h3 {
+    color: #2ecc71;
+    margin-bottom: 20px;
+}
+
+/* INPUTIT */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 12px;
+
+    border-radius: 10px;
+    border: 1px solid #ddd;
+
+    transition: 0.2s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+    border: 1px solid #2ecc71;
+    box-shadow: 0 0 0 2px rgba(46, 204, 113, 0.2);
+    outline: none;
+}
+
+.contact-form textarea {
+    height: 120px;
+    resize: none;
+}
+
+/* NAPPI */
+.contact-form button {
+    width: 100%;
+    padding: 14px;
+
+    background: linear-gradient(135deg, #2ecc71, #27ae60);
+    color: white;
+
+    border: none;
+    border-radius: 10px;
+
+    font-weight: 700;
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.contact-form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* FOOTER */
+.site-footer {
+    background: #1a1a1a;
+    color: white;
+    padding: 60px 0 30px;
+}
+
+.footer-grid {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.logo-footer {
+    height: 60px;
+}
+
+.footer-col {
+    flex: 1;
+    min-width: 200px;
+}
+
+.footer-col p {
+    color: #aaa;
+}
+
+.footer-col a:hover {
+    color: #2ecc71;
+}
