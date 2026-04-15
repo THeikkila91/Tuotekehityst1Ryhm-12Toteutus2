@@ -301,7 +301,7 @@ footer {
 @media (max-width: 768px) {
     .header-group, footer {
         height: auto; 
-        min-height: 200px;
+        min-height: 450px;
         padding: 40px 20px;
     }
 
@@ -318,15 +318,16 @@ footer {
     }
 
     .nav-links {
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
         width: 100%;
-        border-radius: 0.5rem;
     }
+
     .linkgroup1 {
-        border-left: none;
-        border-bottom: 1px dashed grey;
-        width: 100%;
-        padding: 15px;
+        padding: 0.8rem;
+        font-size: 0.9rem;
+        border-left: none; /* Poistetaan katkoviivat mobiilissa */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
 
     .card_image, .promo-card {
