@@ -32,7 +32,7 @@ body {
   align-items: center;
   justify-content: center;
   color: white;
-  background: url('..images/pexels-victorfreitas-841130.jpg') center/cover no-repeat;
+  background: url('../images/pexels-victorfreitas-841130.jpg') center/cover no-repeat;
   overflow: hidden;
 }
 
@@ -290,10 +290,10 @@ button {
 }
 
 .kuntosali { 
-  background-image: linear-gradient(to bottom, white, #444), url('..images/pexels-eyecon-design-500632474-17211446.jpg');
+  background-image: linear-gradient(to bottom, white, #444), url('../images/pexels-eyecon-design-500632474-17211446.jpg');
 }
 .palautuminen { 
-  background-image: linear-gradient(to bottom, white, #444), url('..images/pexels-huum-sauna-heaters-718199222-36420274'); 
+  background-image: linear-gradient(to bottom, white, #444), url('../images/pexels-huum-sauna-heaters-718199222-36420274.jpg'); 
 }
 .jäsenyys { 
   background-image: linear-gradient(to bottom, white, #444), url('gym3.jpg'); 
@@ -302,13 +302,13 @@ button {
 
 /* TRANSITION ANIMATION */
 .kuntosali:hover {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.021), #00ff2248), url('..images/pexels-eyecon-design-500632474-17211446.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.021), #00ff2248), url('../images/pexels-eyecon-design-500632474-17211446.jpg');
   background-position: left;
 
   transition: background 2s;
 }
 .palautuminen:hover {
-  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.021), #00ff2248), url('..images/pexels-huum-sauna-heaters-718199222-36420274.jpg');
+  background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.021), #00ff2248), url('../images/pexels-huum-sauna-heaters-718199222-36420274.jpg');
   background-position: left;
 
   transition: background 2s;
