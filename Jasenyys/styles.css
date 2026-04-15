@@ -413,12 +413,12 @@ footer {
     .header-group, 
     footer {
         height: auto; 
-        min-height: 250px;
+        min-height: 450px;
         padding: 40px 20px;
+        
     }
 
     .navbar, 
-    .nav-links,
     .palvelukortit, 
     .Footer-laatikot, 
     .footer,
@@ -431,15 +431,16 @@ footer {
     }
 
     .nav-links {
-        background: rgba(43, 43, 43, 0.9);
-        width: 90%;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
     }
 
     .linkgroup1 {
+        padding: 0.8rem;
+        font-size: 0.9rem;
         border-left: none;
-        border-bottom: 1px dashed grey;
-        width: 100%;
-        padding: 15px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     }
     .promo-card, 
     .sidebyside_promo,
