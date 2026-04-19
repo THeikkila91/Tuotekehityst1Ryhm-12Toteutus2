@@ -259,10 +259,22 @@ footer {
 }
 
 
-.linkit, li {
+.linkit {
   list-style: none;
-  padding-left: 0;
-  line-height: 1.5rem;
+  padding: 0;
+}
+
+.some {
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0 0;
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+}
+
+.some li {
+  list-style: none;   /* varmistus */
 }
 
 .linkgroup2 {
@@ -279,9 +291,10 @@ footer {
 
 .some {
   display: flex;
-  justify-content: center;
-  gap: 10px; /* säädä tätä (esim. 8–15px) */
+  justify-content: flex-start; /* vasempaan reunaan */
+  gap: 10px;
   padding-left: 0;
+  margin-top: 10px;
 }
 
 .mini-icon {
@@ -344,7 +357,7 @@ footer {
     margin: 2px 0;   /* estää päällekkäisyyden */
   }
 
-  .some {
-    justify-content: center;
+    .some {
+    justify-content: center; /* keskelle mobiilissa */
   }
 }
