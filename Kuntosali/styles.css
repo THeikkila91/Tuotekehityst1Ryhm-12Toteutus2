@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -152,16 +156,15 @@ body {
 .header-group::after {
   content: '';
   position: absolute;
-  bottom: -100px;
-  left: -10%;
-  width: 120%;
-  height: 260px;
+  bottom: -120px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 140%;
+  height: 300px;
   background-color: white;
   border-radius: 50%;
   z-index: 2;
-
 }
-
 
 .navbar {
   position: relative;
@@ -196,7 +199,8 @@ a {
     border-bottom: 4px solid transparent;
 }
 
-.linkgroup1:link,:visited {
+.linkgroup1:link,
+.linkgroup1:visited {
     color: #eee;
 }
 
@@ -239,17 +243,19 @@ button:hover {
 
 footer {
     padding: 4% 5%;
-    width: 90%;
+    width: 100%;
     display: flex;
     background-color: #111111;
     color: white;
-    align-items: center;
+    align-items: flex-start;
     justify-content: space-around;
     line-height: 1.5rem;
+    flex-wrap: wrap;
+    gap: 30px;
 }
 
 .aukioloajat p {
-  line-height: 0.5rem;
+  line-height: 1.3rem;
 }
 
 
@@ -273,11 +279,72 @@ footer {
 
 .some {
   display: flex;
-  flex-flow: row wrap;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 10px; /* säädä tätä (esim. 8–15px) */
   padding-left: 0;
 }
 
 .mini-icon {
   height: 24px;
+}
+
+@media (max-width: 768px) {
+
+  /* HEADER */
+  .navbar {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .nav-links {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .nav-links a {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+  } 
+
+  .logo {
+    width: 120px;
+    height: auto;
+  }
+
+  button {
+    width: 80%;
+    max-width: 250px;
+  }
+
+  /* FOOTER */
+ footer {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 25px 15px;
+    gap: 25px;
+  }
+
+  footer section {
+    width: 100%;
+  }
+
+  footer h2,
+  footer h3 {
+    margin: 12px 0 6px;
+    line-height: 1.2;
+  }
+
+  footer p {
+    margin: 3px 0;
+    line-height: 1.3;
+  }
+
+  .aukioloajat p {
+    margin: 2px 0;   /* estää päällekkäisyyden */
+  }
+
+  .some {
+    justify-content: center;
+  }
 }
