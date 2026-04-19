@@ -8,115 +8,132 @@
 </head>
 <body>
 
-    <header class="header-group">
-            <nav class="navbar">
-                <a href="header.html" class="logo-link">
-                    <img src="../images/logo2.png" class="logo" alt="Northwind Logo">
-                </a>
+<header class="header-group">
+    <nav class="navbar">
+        <a href="../index.html" class="logo-link">
+            <img src="../images/logo2.png" class="logo" 
+            alt="Northwind Gymin logo. Tyylitelty tunnus, joka edustaa kuntosalin brändiä.">
+        </a>
 
-                <nav class="nav-links">
-                    <a href="../index.html" class="linkgroup1">Etusivu</a>
-                    <a href="../Jasenyys/Jasenyys.html" class="linkgroup1">Jäsenyys</a>
-                    <a href="../Kuntosali/Kuntosali.html" class="linkgroup1">Kuntosali</a>
-                    <a href="../Palautuminen/Palautuminen.html" class="linkgroup1">Palautuminen</a>
-                    <a href="../Asiakaspalvelu/asiakaspalvelu.html" class="linkgroup1">Asiakaspalvelu</a>
-                </nav>
-                <button class="button-header">Liity jäseneksi</button>
-            </nav>
+        <div class="nav-links">
+            <a href="../index.html" class="linkgroup1">Etusivu</a>
+            <a href="../Jasenyys/Jasenyys.html" class="linkgroup1">Jäsenyys</a>
+            <a href="../Kuntosali/Kuntosali.html" class="linkgroup1">Kuntosali</a>
+            <a href="../Palautuminen/Palautuminen.html" class="linkgroup1">Palautuminen</a>
+            <a href="../Asiakaspalvelu/asiakaspalvelu.html" class="linkgroup1">Asiakaspalvelu</a>
+        </div>
 
-        </header>
+        <button class="button-header">Liity jäseneksi</button>
+    </nav>
+</header>
 
 <main>
-    <section class="hero-section">
-        <div class="container">
-            <h1 class="main-title">Asiakaspalvelu</h1>
-        </div>
-    </section>
 
-        <div class="contact-info">
-        <h3>Yhteystiedot</h3>
-        <p>Puhelin: +35800000000</p>
-        <p>Osoite: Lujajumppakatu 9, 33100 Tampere</p>
-        <p>Sähköposti: info@northwindgym.fi</p>
-        <p>Avoinna arkisin 11:00-20:00</p>
+<section class="hero-section">
+    <div class="container">
+        <h1 class="main-title">Asiakaspalvelu</h1>
     </div>
+</section>
 
-<div class="contact-wrapper">
+<section class="contact-info">
+    <h2>Yhteystiedot</h2>
+    <p>Puhelin: +35800000000</p>
+    <p>Osoite: Lujajumppakatu 9, 33100 Tampere</p>
+    <p>Sähköposti: info@northwindgym.fi</p>
+    <p>Avoinna arkisin 11:00–20:00</p>
+</section>
+
+<section class="contact-wrapper">
 
     <div class="hero-contact-map">
         <div class="map-container">
-            <iframe loading="lazy" allowfullscreen
-            src="https://www.google.com/maps?q=Lujajumppakatu+9,+33100+Tampere&output=embed"></iframe>
+            <iframe 
+                loading="lazy" 
+                allowfullscreen
+                title="Kartta Northwind Gymin sijainnista Tampereella. Näyttää osoitteen ja lähialueen."
+                src="https://www.google.com/maps?q=Lujajumppakatu+9,+33100+Tampere&output=embed">
+            </iframe>
         </div>
     </div>
 
     <div class="contact-form">
-        <h3>Ota yhteyttä</h3>
+        <h2>Ota yhteyttä</h2>
 
-        <input type="text" placeholder="Nimi">
-        <input type="tel" placeholder="Puhelinnumero">
-        <input type="email" placeholder="Sähköposti">
+        <form>
+            <label for="nimi">Nimi</label>
+            <input id="nimi" type="text" placeholder="Nimi" required>
 
-        <textarea placeholder="Viestisi"></textarea>
+            <label for="puhelin">Puhelinnumero</label>
+            <input id="puhelin" type="tel" placeholder="Puhelinnumero">
 
-        <button>Lähetä</button>
+            <label for="email">Sähköposti</label>
+            <input id="email" type="email" placeholder="Sähköposti" required>
+
+            <label for="viesti">Viesti</label>
+            <textarea id="viesti" placeholder="Viestisi" required></textarea>
+
+            <button type="submit">Lähetä</button>
+        </form>
     </div>
 
-</div> 
+</section> 
 
 </main>
 
-
-</body>
 <footer class="footer">
 
-            <section>
-                <a href="header.html" class="logo-link">
-                    <img src="../images/logo2.png" class="logo" alt="Northwind Logo">
-                </a>
+    <section>
+        <a href="../index.html" class="logo-link">
+            <img src="../images/logo2.png" class="logo" 
+            alt="Northwind Gymin logo footerissa. Sama tunnus kuin sivun yläosassa.">
+        </a>
+    </section>
 
-            </section>
+    <section class="aukioloajat">
+        <h2>Aukioloajat</h2>
+        <p>Avoinna joka päivä</p>
+        <p>klo 05.00 - 24.00</p>
 
-            <section class="aukioloajat">
-                <h2>Aukioloajat</h2>
-                    <p>Avoinna joka päivä</p>
-                    <p>klo 05.00 - 24.00</p>
+        <h3>Asiakaspalvelu on avoinna</h3>
+        <p>Maanantaisin klo 11.00 - 15.00</p>
+        <p>Ti - to klo 10.00 - 17.00</p>
+        <p>Perjantaisin klo 11.00 - 16.00</p>
+    </section>
 
-                <h3>Asiakaspalvelu on avoinna</h3>
-                    <p>Maanantaisin klo 11.00 - 15.00</p>
-                    <p>Ti - to klo 10.00 - 17.00</p>
-                    <p>Perjantaisin klo 11.00 - 16.00</p>
-                
-            </section>
+    <section>
+        <h2>Meistä</h2>
+        <p>+358 000 0000</p>
+        <p>Liurnia 420, 1337 Helsinki</p>
+        <p>info@northwind.fi</p>
 
-            <section>
-                <h2>Meistä</h2>
-                    <p>+358 000 0000</p>
-                    <p>Liurnia 420, 1337 Hellsinki</p>
-                    <p>info@northwind.fi</p>
+        <ul class="some">
+            <li>
+                <img src="../images/yt.PNG" class="mini-icon"
+                alt="YouTube-ikoni. Linkki Northwind Gymin YouTube-kanavalle.">
+            </li>
+            <li>
+                <img src="../images/ig.PNG" class="mini-icon"
+                alt="Instagram-ikoni. Linkki Northwind Gymin Instagram-tilille.">
+            </li>
+            <li>
+                <img src="../images/fb.PNG" class="mini-icon"
+                alt="Facebook-ikoni. Linkki Northwind Gymin Facebook-sivulle.">
+            </li>
+        </ul>
+    </section>
 
-                <ul class="some">
-                <li>
-                    <img src="../images/yt.PNG" alt="Youtube" class="mini-icon">
-                    </li>
-                <li>
-                    <img src="../images/ig.PNG" alt="Instagram" class="mini-icon">
-                    </li>
-                <li>
-                    <img src="../images/fb.PNG" alt="Facebook" class="mini-icon">
-                    </li>
-            </section>
+    <section class="Pikalinkit">
+        <h2>Pikalinkit</h2>
+        <ul class="linkit">
+            <li><a href="../index.html" class="linkgroup2">Etusivu</a></li>
+            <li><a href="../Jasenyys/Jasenyys.html" class="linkgroup2">Jäsenyys</a></li>
+            <li><a href="../Kuntosali/Kuntosali.html" class="linkgroup2">Kuntosali</a></li>
+            <li><a href="../Palautuminen/Palautuminen.html" class="linkgroup2">Palautuminen</a></li>
+            <li><a href="../Asiakaspalvelu/asiakaspalvelu.html" class="linkgroup2">Asiakaspalvelu</a></li>
+        </ul>
+    </section>
 
-            <section class="Pikalinkit">
-                <h2>Pikalinkit</h2>
-                    <ul class="linkit">
-                        <li><a href="../index.html" class="linkgroup2">Etusivu</a></li>
-                        <li><a href="../Jasenyys/Jasenyys.html" class="linkgroup2">Jäsenyys</a></li>
-                        <li><a href="../Kuntosali/Kuntosali.html" class="linkgroup2">Kuntosali</a></li>
-                        <li><a href="../Palautuminen/Palautuminen.html" class="linkgroup2">Palautuminen</a></li>
-                        <li><a href="../Asiakaspalvelu/asiakaspalvelu.html" class="linkgroup2">Asiakaspalvelu</a></li>
-                </ul>
-            </section>
+</footer>
 
-        </footer>
+</body>
 </html>
