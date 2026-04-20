@@ -2,83 +2,84 @@
 <html lang="fi">
 <head>
     <meta charset="UTF-8">
-    <title>Tyyliohje - Northwind Gym</title>
-    <link rel="stylesheet" href="styles.css"> <style>
-        /* Ohjesivun omat apuluokat esittelyä varten */
-        .sg-wrapper { padding: 50px; max-width: 1100px; margin: 0 auto; background: white; }
-        .sg-section { margin-bottom: 70px; padding: 30px; border: 1px solid #eee; border-radius: 15px; }
+    <title>Style Guide - Northwind Gym (Toteutus 2)</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        .sg-wrapper { padding: 50px; max-width: 1100px; margin: 0 auto; background: #fff; color: #333; }
+        .sg-section { margin-bottom: 70px; padding: 30px; border: 1px solid #eee; border-radius: 15px; background: #fcfcfc; }
+        .sg-label { display: block; font-weight: bold; margin-bottom: 20px; font-size: 1.2rem; color: #111; border-bottom: 2px solid #28a745; padding-bottom: 5px; }
+        
         .color-grid { display: flex; gap: 20px; flex-wrap: wrap; }
         .swatch { width: 140px; text-align: center; font-size: 0.8rem; }
         .box { height: 70px; border-radius: 10px; border: 1px solid #ddd; margin-bottom: 8px; }
-        .usage-note { display: block; margin-top: 15px; font-style: italic; color: #666; font-size: 0.9rem; }
+        
+        .usage-note { display: block; margin-top: 20px; font-style: italic; color: #666; font-size: 0.9rem; background: #eee; padding: 10px; border-radius: 5px; }
+        
+        /* Korjauksia ohjesivun esikatseluun (koska CSS:ssäsi on absolute-asetteluja) */
+        .sg-nav-preview { background: #333; padding: 20px; border-radius: 10px; display: flex; justify-content: center; }
+        .sg-nav-preview .navbar { position: static; width: 100%; }
+        
+        .sg-card-preview { display: flex; justify-content: center; padding: 20px; background: #f0f0f0; border-radius: 10px; }
     </style>
 </head>
-<body style="background-color: #f4f4f4;">
+<body style="background-color: #e9e9e9; margin: 0; font-family: sans-serif;">
 
 <div class="sg-wrapper">
-    <h1 style="color: #05162a; border-bottom: 4px solid #00a6c7; padding-bottom: 10px;">Northwind Gym - Style Guide - Toteutus 2</h1>
-    <p>Tämä dokumentti määrittelee sivuston visuaaliset standardit ja uudelleenkäytettävät komponentit.</p>
-
+    <h1 style="color: #111; margin-top: 0;">Northwind Gym - Styleguide, Toteutus 2</h1>
     <section class="sg-section">
         <span class="sg-label">1. Väripaletti</span>
         <div class="color-grid">
-            <div class="swatch"><div class="box" style="background: #2ecc71"></div><strong>Emerald Green</strong><br>#2ecc71</div>
-            <div class="swatch"><div class="box" style="background: #05162a;"></div><strong>Navy</strong><br>#05162a</div>
-            <div class="swatch"><div class="box" style="background: #fcfcfc;"></div><strong>Light BG</strong><br>#fcfcfc</div>
+            <div class="swatch"><div class="box" style="background: #28a745"></div><strong>Gym Green</strong><br>#28a745</div>
+            <div class="swatch"><div class="box" style="background: #197e2f"></div><strong>Hover Green</strong><br>#197e2f</div>
+            <div class="swatch"><div class="box" style="background: #004d2c"></div><strong>Vignette Dark</strong><br>rgba(0,77,44)</div>
+            <div class="swatch"><div class="box" style="background: #111111"></div><strong>Footer Black</strong><br>#111111</div>
+            <div class="swatch"><div class="box" style="background: #eee"></div><strong>Text Light</strong><br>#eee</div>
         </div>
-        <span class="usage-note">Käyttöohje: Emerald green on brändin pääväri. Emerald green näkyy erityisesti eri painikkeissa ja headerin taustaa sävyttämässä</span>
+        <span class="usage-note">
+            <strong>Käyttö:</strong> Vihreää (#28a745) käytetään korostuksissa ja painikkeissa. 
+            Tummaa vihreää käytetään kuvien päällä olevassa "vignette"-efektissä tuomaan syvyyttä.
+        </span>
+    </section>
+
+
+    <section class="sg-section">
+        <span class="sg-label">2. Navigaatio</span>
+        <img src="/images/nav1.png" alt="Headerin navigaatio">
+        <img src="/images/nav2.png" alt="Footerin navigaatio">
+        <span class="usage-note">
+            Navigaatio on läpinäkyvän harmaa (rgba(43, 43, 43, 0.747)). Linkkien välissä on 2px katkoviiva ja reunoissa pyöristykset. 
+            Hover-tila vaihtaa tekstin vihreäksi ja lisää alaviivan. Alempi esimerkki kuva on footerin pikanavigaatiosta.
+        </span>
     </section>
 
     <section class="sg-section">
-        <span class="sg-label">2. Typografia</span>
-        <h1 style="color: #05162a; font-size: 3rem; margin: 0;">Otsikko H1 (Hero)</h1>
-        <h2 style="color: #05162a; font-size: 2.5rem;">Otsikko H2 (Sivuotsikko)</h2>
-        <p style="color: #444;">Leipäteksti: Helvetica, Arial. Käytetään koossa 14px-18px. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        <span class="usage-note">Käyttöohje: Otsikot ovat aina tummansinisiä (#05162a) ja leipäteksti harmaata (#444) luettavuuden parantamiseksi.</span>
+        <span class="sg-label">3. Painikkeet</span>
+        <img src="/images/painike1.png" alt=Sivustolla oleva painike">
+        <img src="/images/painike2.png" alt="Sivustolla oleva painike">
+        <span class="usage-note">
+            Painikkeet ovat pyöristettyjä (border-radius: 30px). 
+            Vihreässä painikkeessa on tummanvihreä reunus.
+            Hover over toiminto tummentaa vihreän sävyä.
+        </span>
     </section>
 
     <section class="sg-section">
-        <span class="sg-label">3. Komponentti: Navigaatio</span>
-        <header style="position: static; width: auto; margin: 0;">
-            <div class="logo">LOGO</div>
-            <nav>
-                <ul>
-                    <li><a href="#">Etusivu</a></li>
-                    <li><a href="#">Kuntosali</a></li>
-                </ul>
-            </nav>
-        </header>
-        <span class="usage-note">Käyttöohje: Päänavigaatio on yhtenäinen kaikilla sivuilla. Aktiivinen linkki tai hover-tila muuttaa tekstin mustaksi.</span>
+        <span class="sg-label">4. Sisältölaatikot</span>
+        <img src="/images/esimlaatikko.png" alt="Esimerkki sisältö laatikosta">
+        <img src="/images/esimlaatikko2.png" alt="Esimerkki sisältö laatikosta">
+        <img src="/images/esimlaatikko3.png" alt="Esimerkki sisältö laatikosta">
+        <span class="usage-note">
+            Sivustolla on käytössä erilaisia sisältölaatikoita joissa teksti kuvan vierellä tai kuvan keskellä tai ilman kuvaa laatikon sisällä.
+            Laatikoilla kulmissa pyöristys ja käytössä kevyt ja ohut harmaa border viiva.
+        </span>
     </section>
-
     <section class="sg-section">
-        <span class="sg-label">4. Komponentti: Painikkeet</span>
-        <div style="display: flex; gap: 20px; background: #333; padding: 20px; border-radius: 10px;">
-            <a href="#" class="btn btn-primary">Liity jäseneksi</a>
-            <a href="#" class="btn btn-outline">Kirjaudu</a>
-        </div>
-        <span class="usage-note">Käyttöohje: Oranssia (primary) käytetään konversioihin. Outline-nappia käytetään toissijaisiin toimintoihin.</span>
+        <span class="sg-label">5. Header</span>
+        <img src="/images/header.png" width="1200" alt="Esimerkki sisältö laatikosta">
+        <span class="usage-note">
+            Headerissa alareunassa kaarevaa muotoa ja vihertävää sävyä. Halusimme tällä tuoda sivustolle näyttävyyttä ja persoonallisuutta. Ja vihreällä värillä yhtenäistää väriteemaa.
+        </span>
     </section>
-
-    <section class="sg-section">
-        <span class="sg-label">5. Komponentti: Kaupunkilaatikko</span>
-        <div class="kaupunki-laatikko" style="margin: 0; width: 250px;">
-            <div style="height: 150px; background: #ddd; display: flex; align-items: center; justify-content: center;">KUVA</div>
-            <span class="kaupunki-nimi">Helsinki</span>
-            <p class="kaupunki-teksti">Moderni ja monipuolinen kuntokeskus kaupungin sydämessä.</p>
-        </div>
-        <span class="usage-note">Käyttöohje: Kortteja käytetään eri toimipisteiden esittelyyn ruudukkomaisessa muodossa.</span>
-    </section>
-
-    <section class="sg-section">
-        <span class="sg-label">6. Komponentti: Sisältöosio (Intro)</span>
-        <div class="intro" style="margin: 0; max-width: 100%;">
-            <h2>Tervetuloa</h2>
-            <p>Esimerkki tekstiosioista, joissa on mustat reunat ja pyöristetyt kulmat koodinne mukaisesti.</p>
-        </div>
-        <span class="usage-note">Käyttöohje: Käytetään sivun pääsisällön jakamiseen selkeisiin, rajattuihin kokonaisuuksiin.</span>
-    </section>
-
 </div>
 
 </body>
