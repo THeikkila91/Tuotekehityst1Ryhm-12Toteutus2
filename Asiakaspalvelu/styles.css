@@ -313,6 +313,10 @@ footer {
         text-align: center;
     }
 
+    .some {
+    justify-content: center;
+}
+
     button {
         width: 100%;
     }
