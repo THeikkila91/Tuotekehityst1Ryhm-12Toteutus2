@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <title>Northwind Etusivu</title>
+    <meta name="description" content="Tervetuloa Northwind kuntosalin sivuille! Täältä löydät kaikki meidän kuntosalimme olennaiset ja ajankohtaiset tiedot. Tule mukaan liikkumaan!">
 </head>
 
     <body class="container">
 
-        <header class="header-group">
+        <header class="header-group" alt="Kuva henkilöstä, joka tekee maastanoston tangolla">
             <nav class="navbar">
                 <a href="index.html" class="logo-link">
                     <img src="images/logo2.png" class="logo" alt="Northwind Logo">
@@ -22,15 +23,15 @@
                     <a href="Palautuminen/Palautuminen.html" class="linkgroup1">Palautuminen</a>
                     <a href="Asiakaspalvelu/Asiakaspalvelu.html" class="linkgroup1">Asiakaspalvelu</a>
                 </nav>
-                <button class="button-header">Liity jäseneksi</button>
+                <a href="Jasenyys/Jasenyys.html" class="button-header">Liity jäseneksi</a>
             </nav>
 
             <div class="hero-content">
                 <h1>Tervetuloa Northwindiin<br>liikunnan iloa jokaiselle!</h1>
                 <p>Matalan kynnyksen kuntosali. Meillä ei kilpailla ennätyksistä, vaan hyvästä fiiliksestä.</p>
                 <div class="hero-buttons">
-                    <button class="btn-green">Liity jäseneksi</button>
-                    <button class="btn-outline">Tutustu palveluihin</button>
+                    <a href="Jasenyys/Jasenyys.html" class="button-green">Liity jäseneksi</a>
+                    <a href="#Tutustu_palveluihin" class="button-outline">Tutustu palveluihin</a>
                 </div>
             </div>
 
@@ -38,17 +39,18 @@
 
 
         <main class="content-main">
-            <h1><em>Meillä...</em></h1>
+            <h1 id="Tutustu_palveluihin"><em>Meillä...</em></h1>
 
             <section class="content-intro">
-                <section class="card kuntosali">
+                <section class="card kuntosali" alt="Kuva Northwind kuntosalin sisältä">
                     <h2>Tyylikäs kuntosali</h2>
-                    <button class="btn-card">Valitse kuntosali</button>
+                    <a href="Kuntosali/Kuntosali.html" class="cardlinks">Valitse kuntosali</a>
                 </section>
 
-                <section class="card palautuminen">
-                    <h2>Palautumis mahdollisuuksia</h2>
-                    <button class="btn-card">Palautuminen</button>
+                <section class="card palautuminen" alt="Kuva kuntosalin sisäisestä saunasta">
+                    <h2>Palautumismahdollisuuksia</h2>
+                    <a href="Palautuminen/Palautuminen.html" class="cardlinks">Lue lisää</a>
+                        
                 </section>
                 
                 <section class="yapping">
@@ -62,9 +64,9 @@
 
                 </section>
                 
-                <section class="card jäsenyys">
+                <section class="card jäsenyys" alt="Kuva henkilöstä puhelin kädessä kuntosalilla">
                     <h2>Edullinen jäsenyys</h2>
-                    <button class="btn-card">Jäsenyys</button>
+                    <a href="Jasenyys/Jasenyys.html" class="cardlinks">Lue lisää</a>
                 </section>
             
             </section>
@@ -75,12 +77,12 @@
 
                 <section class="form">
                 
-                    <form>
+                    <form id="no">
                     <h2>Tervetuloa tutustumaan!</h2>
                     <p>Ole meihin yhteydessä ja palaamme asiaan mahdollisimman pian!</p>
                         <ul>   
                             <div>
-                                <input type="text" id="name" name="name" placeholder="Nimi" autofocus class="full-width">
+                                <input type="text" id="name" name="name" placeholder="Nimi">
                             </div>
 
                             <div class="row">
@@ -101,7 +103,7 @@
                 </section>
 
                 <section class="maps">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30472.359493769247!2d23.771432285982772!3d61.487813945344534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stampere%20salit!5e0!3m2!1sfi!2sfi!4v1776670518341!5m2!1sfi!2sfi" width="600" height="450" style="border-radius:16px; border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d30472.359493769247!2d23.771432285982772!3d61.487813945344534!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1stampere%20salit!5e0!3m2!1sfi!2sfi!4v1776670518341!5m2!1sfi!2sfi" style="width: 650px; height:450px; border-radius:16px; border:0;" allowfullscreen="" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </section>
 
             </section>
@@ -138,13 +140,13 @@
 
                 <ul class="some">
                 <li>
-                    <img src="images/yt.PNG" alt="Youtube" class="mini-icon">
+                    <img src="images/yt.PNG" alt="Small Youtube icon" class="mini-icon">
                     </li>
                 <li>
-                    <img src="images/ig.PNG" alt="Instagram" class="mini-icon">
+                    <img src="images/ig.PNG" alt="Small Instagram icon" class="mini-icon">
                     </li>
                 <li>
-                    <img src="images/fb.PNG" alt="Facebook" class="mini-icon">
+                    <img src="images/fb.PNG" alt="Small Facebook icon" class="mini-icon">
                     </li>
             </section>
 

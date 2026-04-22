@@ -1,25 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin: 0;
     font-family: sans-serif;
 }
-
-
-.container {
-  display: grid;
-  grid-template-columns: auto;
-
-}
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -100,13 +86,18 @@ body {
   border-radius: 1rem;
 }
 
-a {
+.linkgroup1 {
     padding: 1rem;
     line-height: 1.0rem;
     text-decoration: none;
     border-bottom: 4px solid transparent;
     width: 125px;
 }
+
+.linkgroup2 {
+  text-decoration: none;
+}
+
 
 .linkgroup1:link,:visited {
     color: #eee;
@@ -142,7 +133,7 @@ a {
     height: 150px;
 }
 
-/* --- HEADER BUTTON SETTINGS --- */
+/* --- NORMAL BUTTON SETTINGS (ONLY FOR FORM)--- */
 button {
   padding: 12px 24px;
   border-radius: 30px;
@@ -151,7 +142,6 @@ button {
   cursor: pointer;
   background: #28a745; 
   color: white;
-  border: 2px solid rgb(0, 88, 0)
 }
 
 button:hover {
@@ -230,24 +220,79 @@ footer {
   display: flex;
   gap: 15px;
   justify-content: center;
+  align-items: center;
 }
 
-/* --- Button Styling --- */
-button {
+
+
+/* BUTTON LINKKIEN TYYLIT TARKEMMIN */
+
+.button-header {
   padding: 12px 24px;
   border-radius: 30px;
-  border: none;
   font-weight: bold;
-  cursor: pointer;
+  background: #28a745; 
+  font-size: 0.95rem;
+  color: white; 
+  text-decoration: none;
+  text-align: center;
 }
 
-.btn-green { background: #28a745; color: white; }
-.btn-card { background: #28a745; color: white; border-radius: 8px; }
-.btn-outline { 
+.button-green {
+  padding: 14px 24px;
+  border-radius: 30px;
+  font-weight: bold;
+  background: #28a745;
+  font-size: 0.95rem;
+  color: white; 
+  text-decoration: none;
+  text-align: center;
+}
+
+.button-outline { 
   background: transparent; 
+  border-radius: 30px; 
+  padding: 12px 24px;
+  font-weight: bold;
+  font-size: 0.95rem;
   border: 2px solid white; 
   color: white; 
+  text-decoration: none;
 }
+
+.button-header:hover {
+  background: #197e2f;
+  transition: background 0.2s;
+}
+.button-green:hover {
+  background: #197e2f;
+  transition: background 0.2s;
+}
+.button-outline:hover {
+  background: #197e2f;
+  transition: background 0.2s;
+}
+
+
+
+.cardlinks { 
+  background: #28a745;  
+  border-radius: 8px; 
+  padding: 12px 24px; 
+  text-decoration: none; 
+  display: inline-block; 
+  font-weight: bold;
+  font-size: 0.95rem;
+}
+
+.cardlinks:hover {
+  background: #197e2f;
+  transition: background 0.2s;
+}
+
+
+
+
 
 
 /* --- MAIN INTRO --- */
@@ -434,9 +479,6 @@ form p {
 
 
 
-
-
-
 @media (max-width: 1130px) {
 
   /* HEADER */
@@ -496,7 +538,16 @@ form p {
   }
 
   .aukioloajat p {
-    margin: 2px 0;   /* estää päällekkäisyyden */
+    margin: 2px 0;   
+    min-height: 20px; /* estää päällekkäisyyden */
+  }
+
+  .aukioloajat h2 {
+    margin: 14px;
+  }
+
+  .aukioloajat h3 {
+    margin: 14px;
   }
 
     .some {
@@ -506,6 +557,26 @@ form p {
 
 
 
+@media (max-width: 730px) { 
+
+  .maps { /* korjaa google maps embed responsiiviseksi mobiilinäkymässä */
+    width: 375px;
+    height: 300px;
+    overflow: hidden;
+  }
+
+  .card { /* korjaa korttien kuvat */
+    background-size: 165%;
+  }
 
 
+  /* korjaa headerin tekstin navigaation päältä 375px leveyteen asti*/
+  .nav-links {
+    margin-bottom: 2rem;
+  }
 
+  .hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+}
